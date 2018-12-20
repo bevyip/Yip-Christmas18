@@ -1,0 +1,167 @@
+p {
+  font-family: 'Quicksand';
+}
+
+.welcome {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  align-items: center;
+  /* justify-content: center; */
+
+  background-image: url("../images/main_wallpaper.png");
+  background-color: #cccccc;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.welcome-text {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.welcome-text h1 {
+  font-size: 80px;
+  font-family: 'Petit Formal Script';
+}
+
+.welcome-text p {
+  font-size: 20px;
+}
+
+.name-logo ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.name-logo img {
+  margin: 0 10px;
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #b8def4;
+
+  background-image: url("../images/person-background.jpg");
+  background-color: #cccccc;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.section h1 {
+  font-family: 'Arvo';
+  font-weight: bold;
+  margin-top: 18px;
+}
+
+.section h2 {
+  font-family: 'Oleo Script';
+  margin-top: 10px;
+  font-size: 50px;
+}
+
+#person-desc {
+  font-size: 20px;
+}
+
+.person-content {
+  height: 380px;
+  width: 380px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+#person-image img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.back-button a {
+  position:absolute;
+  display: flex;
+  flex-direction: row;
+  top: 10px;
+  left: 10px;
+  justify-content: flex-start;
+  z-index: 2;
+
+  font-family: 'Playfair Display';
+  font-size: 25px;
+  font-weight: bold;
+  color: black !important;
+}
+
+.back-button a:hover, .back-button a:visited {
+  text-decoration: none;
+  color: black !important;
+}
+
+.bottom {
+  display: flex;
+  margin-top: auto;
+  font-size: 13px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: 'Oleo Script';
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: red;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}

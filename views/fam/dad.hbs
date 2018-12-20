@@ -1,0 +1,61 @@
+<div class="back-button">
+  <a href="/">
+    <p>← Back</p>
+  </a>
+ </div>
+<div class="section dad">
+  <h1>Dad is...</h1>
+  <div class="person-desc">
+    <p id="person-desc"></p>
+  </div>
+  <div class="person-content">
+    <div id="person-image"></div>
+  </div>
+  <h2>HAVE A MERRY CHRISTMAS!!!</h2>
+</div>
+
+<script>
+const image = document.getElementById('person-image');
+const text = document.getElementById('person-desc');
+
+function getRandomImage()
+{
+    var images = [
+        '/images/dad/also_handsome.PNG',
+        '/images/dad/athletic.jpg',
+        '/images/dad/bald.jpg',
+        '/images/dad/funy.jpg',
+        '/images/dad/gd_dad.jpg',
+        '/images/dad/handsome.jpg',
+        '/images/dad/hardworking.PNG',
+        '/images/dad/husband.jpg',
+        '/images/dad/chef.jpg'
+    ];
+    var ran_num = Math.floor(Math.random() * 9);
+    var num = images[ran_num];
+
+    setText(ran_num);
+    setImage(num);
+}
+
+function setText(ran_num) {
+  if (ran_num === 0){text.innerHTML = "Still Handsome";}
+  if (ran_num === 1){text.innerHTML = "Very Athletic";}
+  if (ran_num === 2){text.innerHTML = "A Man With A Unique Hairstyle";}
+  if (ran_num === 3){text.innerHTML = "Funny HOHOHO";}
+  if (ran_num === 4){text.innerHTML = "The Best Dad!";}
+  if (ran_num === 5){text.innerHTML = "Very Handsome";}
+  if (ran_num === 6){text.innerHTML = "Incredibly Hardworking";}
+  if (ran_num === 7){text.innerHTML = "A Great Husband ❤";}
+  if (ran_num === 8){text.innerHTML = "A Skilled Chef yum";}
+}
+
+function setImage(thisImg) {
+    var img = document.createElement("IMG");
+    img.src = thisImg;
+    image.appendChild(img);
+}
+
+getRandomImage();
+
+</script>
